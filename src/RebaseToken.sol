@@ -65,7 +65,7 @@ contract RebaseToken is ERC20 {
         s_interestRate = _newInterestRate;
         emit interestRateSet(_newInterestRate);
     }
-
+    //
     function mint(address _to, uint256 _amount) external {
         _mintAccruedInterest(_to);
         s_userInterestRate[_to] = s_interestRate;
